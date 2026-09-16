@@ -10,7 +10,7 @@ const AddTaskForm = (props) => {
                 <br />
                 <label>
                     Due date: 
-                    <input type="data" name="dedaline" required />
+                    <input type="data" name="deadline" required />
                 </label>
                 <br />
                 <label>
