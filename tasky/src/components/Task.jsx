@@ -7,9 +7,9 @@ const Task = (props) => {
             <p className="bold"> {props.description}</p>
             <p className="bold"> {props.priority}</p>
             <button className="doneButton"onClick={props.markDone}>Done</button>
+            <button className='deleteButton' onClick={props.deleteTask}>Delete</button>
         </div>
     )
-
 }
 
 export default Task;

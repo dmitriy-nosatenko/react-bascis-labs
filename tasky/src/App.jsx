@@ -17,7 +17,13 @@ function App() {
     tasks[taskIndex].done = !tasks[taskIndex].done;
     setTaskState({tasks});
     console.log(`${taskIndex}) ${tasks[taskIndex].done}`);
-  }
+  };
+
+  const deleteHandler = (taskIndex) => {
+    const tasks = [...taskState.tasks];
+    tasks.splice(taskIndex, 1);
+    setTaskState({tasks}) 
+  };
 
   return (
 
@@ -32,7 +38,8 @@ function App() {
       deadline={task.deadline}
       priority={task.priority}
       markDone= {() => doneHandler(index)}
-      done={task.done} 
+      done={task.done}
+      deleteTask = {() => deleteHandler(index)} 
     />
   ))} 
 
