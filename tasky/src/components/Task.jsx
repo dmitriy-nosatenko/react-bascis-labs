@@ -1,7 +1,13 @@
+const priorityColors = {
+    Low: '#5bb4c4',
+    Medium: '#f39c12',
+    High: '#e74c3c', 
+}; 
+
 const Task = (props) => {
 
         return (
-        <div className="card" style={{backgroundColor: props.done ? 'lightgrey' : '#5bb4c4'}}>
+        <div className="card" style={{backgroundColor: props.done ? 'lightgrey' : priorityColors[props.priority]}}>
             <p className="title"> {props.title}</p>
             <p>Due: {props.deadline}</p>
             <p className="bold"> {props.description}</p>
