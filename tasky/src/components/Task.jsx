@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CheckIcon from '@mui/icons-material/Check';
 
 const priorityColors = {
     Low: '#5bb4c4',
@@ -16,14 +18,17 @@ const priorityColors = {
 const Task = (props) => {
 
         return (
-     <Grid
-  key={props.id}
-  size={{ xs: 12, md: 4 }}
->
+           <Grid 
+           key={props.id}
+           size={{ xs: 12, md: 4}}
+           >
   <Card
     sx={{
       backgroundColor: props.done ? 'lightgrey' : 'lightblue',
-      padding: '20px'
+      padding: '20px',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column' 
     }}
   >
     <CardHeader
@@ -43,7 +48,8 @@ const Task = (props) => {
             justifyContent: 'center',
             alignItems: 'baseline',
             mb: 2,
-            padding: '20px' 
+            padding: '20px',
+            flexGrow: 1
         }}
         >
             <Typography
@@ -75,6 +81,7 @@ const Task = (props) => {
         size="small"
         color="success"
         onClick={props.markDone}
+        endIcon={<CheckIcon />}
         >
             Done 
         </Button>
@@ -83,14 +90,15 @@ const Task = (props) => {
         size="small"
         color="error"
         onClick={props.deleteTask}
+        endIcon={<DeleteIcon />}
         >
             Delete 
         </Button>
     </CardActions>
   </Card>
 </Grid>
-    )
-}
+    );
+};
 
 export default Task;
 

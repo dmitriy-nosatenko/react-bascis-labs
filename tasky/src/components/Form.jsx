@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
 
 const AddTaskForm = (props) => {
 
@@ -48,13 +49,14 @@ const AddTaskForm = (props) => {
       type="submit"
       variant="contained"
       color="primary"
+      size="medium"
       sx={{
         m: 1,
         p: 1,
         width: '95%'
       }}
       >
-        Add Task 
+        <AddIcon />
       </Button>
     </div>
     </Box>

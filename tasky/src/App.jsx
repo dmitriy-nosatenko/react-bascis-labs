@@ -82,12 +82,14 @@ function App() {
         align="center"
         gutterBottom
         sx={{
-          backgrounColor: 'gray',
+          backgrounColor: 'primary.main',
           textAlign: 'center',
-          color: 'white',
+          color: 'lightblue',
           padding: '20px',
           margin: '20px 0 40px 0',
-          borderRadius: '4px'
+          borderRadius: 2,
+          cornerRadius: '50%',
+          fontWeight: 'fontWeightLight'
         }}
         >
           Tasky 
@@ -121,6 +123,10 @@ function App() {
     borderTop: (theme) => `1px solid ${theme.palette.divider}`,
     my: 6,
     py: 6, 
+    backgrounColor: 'primary.main',
+    color: 'white',
+    borderRadius: 2, 
+    p: 2
   }}
   >
     <Grid container justifyContent="center">
